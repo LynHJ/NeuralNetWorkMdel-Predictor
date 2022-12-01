@@ -11,19 +11,25 @@
 
 The purpose of this project is demonstrate how to use unsupervised machine learning skill to classify a data set regarding to myopia. 
 
-## Aanalsis
+## Pre-Aanalsis
 
-<p align="center"><img src='https://github.com/LynHJ/UnsupervisedML-MyopiaClusters/blob/d8281ef3033a2080101c464bfe3b299dad52e955/Image/2clusters.png' width= 70% ></p>   
+<p align="center"><img src='' width= 80% ></p>   
+
+### Sub-Summary:
+
+When I designed the first model, I was trying to simplify the data and apply a shallow deep learning model. For each non-numeric-data column, I categorized them into two categories, a category which has the highest count numbers and the other. After I had executed the whole process, I realized that the way I binned data might confuse the model as the organization did not simply use dichotomy to assess each applicant. 
+
+## Optimized-Aanalsis
+<p align="center"><img src='' width= 80% ></p>
 
 ### Summary:
 
-After executing PCA and t_SNE to apply dimensionality reduction, unfortunately, the result showed there were no distinct clusters. Then I will try the K-means method to get the best number of clusters(the elbow).  
+I demonstrated how I optimized my model on page 4~page 6 in the Analysis Report. The final result is shown above.
 
-<img src='https://github.com/LynHJ/UnsupervisedML-MyopiaClusters/blob/d8281ef3033a2080101c464bfe3b299dad52e955/Image/The%20elbow.png' width= 50% ><img src='https://github.com/LynHJ/UnsupervisedML-MyopiaClusters/blob/d8281ef3033a2080101c464bfe3b299dad52e955/Image/3clusters.png' width= 50% />   
+This dataset is the records about an organization following their existing procedures and established requirements to assess the applicants who can get support or not. However, the deep-learning model is based on supervised machine learning and normally using unstructured data. For example, to classify cats and dogs. 
 
-### Summary:
-
-As the combination of PCA and t_SNE could not help me to classify the data into a few clusters, I tried to use another combination, K-means and PCA. Instead of doing too much dimensionality reduction, use K-means to determine the best number of clusters for the data set and then use PCA to generate 3 principle components. From the output above, there are three distinctive clusters.  
+In my opinion, supervised machine learning might be a better way to create a classifier. As this data set has 10 features and 50 columns after executing the dummy method, applying the “Random Forest Classifier Model” might be a suitable option to build up a classifier.
+  
 
 ## Content:
 ```
@@ -32,8 +38,11 @@ Project
 ├── AlphabetSoupCharity.ipynb
 ├── AlphabetSoupCharity_Optimisation.h5
 ├── AlphabetSoupCharity_Optimisation.ipynb
+├── Analysis Report.pdf
 ├── Image
-│   └── neural network.jpg
+│   ├── neural network.jpg
+│   ├── Optimized-Aanalsis
+│   └── Pre-Aanalsis
 ├── README.md
 ├── Resources
 │   └── charity_data.csv
